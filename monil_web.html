@@ -1,0 +1,261 @@
+<!--
+Single-file responsive website for "Mukesh Bhandari Chicken Center".
+How to use:
+1. Open this file in a browser to preview.
+2. Edit contact info, address, map link, menu, images, and working hours below.
+3. To publish: upload to any static host (Netlify, Vercel, GitHub Pages) or your web host.
+
+Notes:
+- Replace placeholder images in the /images/ folder or change URLs to real images.
+- The contact form uses a `mailto:` fallback. Replace with a backend endpoint for production.
+- JSON-LD structured data included for local business SEO.
+-->
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Mukesh Bhandari Chicken Center — Surat</title>
+  <meta name="description" content="Mukesh Bhandari Chicken Center — famous non-veg takeaway & delivery in Surat. Fresh chicken & mutton dishes, evening hours, quick delivery." />
+  <link rel="icon" href="data:;base64,iVBORw0KGgo="> 
+  <style>
+    :root{--accent:#c0392b;--dark:#222;--muted:#666}
+    *{box-sizing:border-box}
+    body{font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; margin:0; color:var(--dark); line-height:1.4}
+    .container{max-width:1100px;margin:0 auto;padding:20px}
+    header{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+    .brand{display:flex;gap:12px;align-items:center}
+    .logo{width:64px;height:64px;background:#eee;border-radius:8px;display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--accent)}
+    nav a{margin-left:14px;text-decoration:none;color:var(--muted)}
+    .hero{display:grid;grid-template-columns:1fr 360px;gap:24px;align-items:center;margin-top:18px}
+    .hero h1{font-size:28px;margin:0}
+    .badge{background:var(--accent);color:white;padding:6px 10px;border-radius:6px;font-weight:600;display:inline-block}
+    .card{background:#fff;border-radius:12px;padding:14px;box-shadow:0 6px 18px rgba(20,20,20,0.06)}
+    .cta{display:inline-block;background:var(--accent);color:white;padding:10px 14px;border-radius:8px;text-decoration:none;font-weight:600}
+    .small{font-size:14px;color:var(--muted)}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:18px}
+    .menu-item{display:flex;gap:12px;align-items:center}
+    .menu-item img{width:92px;height:64px;object-fit:cover;border-radius:8px}
+    .hours{display:flex;flex-direction:column;gap:6px}
+    iframe{width:100%;border:0;border-radius:8px}
+    footer{margin-top:28px;padding:18px 0;border-top:1px solid #eee;color:var(--muted)}
+    /* responsive */
+    @media (max-width:880px){.hero{grid-template-columns:1fr;}.brand .logo{width:52px;height:52px}.hero h1{font-size:22px}}
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Restaurant",
+    "name":"Mukesh Bhandari Chicken Center",
+    "image":"https://content.jdmagicbox.com/comp/surat/c5/0261px261.x261.230217040932.z5c5/catalogue/mukesh-bhandari-surat-food-court-m5vj5bamd4-250.jpg",
+    "@id":"",
+    "url":"https://maps.app.goo.gl/WyDQc5PGYMwv3D4k8",
+    "telephone":"+91-XXXXXXXXXX",
+    "address":{
+      "@type":"PostalAddress",
+      "streetAddress":"Plot 142, Gamtal Paiki, Adajan Road",
+      "addressLocality":"Surat",
+      "addressRegion":"Gujarat",
+      "postalCode":"395009",
+      "addressCountry":"IN"
+    },
+    "openingHours":"Mo-Su 18:00-23:00",
+    "servesCuisine":"Non Vegetarian",
+    "priceRange":"₹",
+    "aggregateRating":{
+      "@type":"AggregateRating",
+      "ratingValue":"4.3",
+      "reviewCount":"120"
+    }
+  }
+  </script>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo">MB</div>
+        <div>
+          <div style="font-weight:700">Mukesh Bhandari Chicken Center</div>
+          <div class="small">Surat • Takeaway & Delivery</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#menu">Menu</a>
+        <a href="#hours">Hours</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div>
+        <div class="badge">Popular non‑veg spot</div>
+        <h1>Fresh chicken & mutton dishes — ready for takeaway or fast delivery</h1>
+        <p class="small">Located on Adajan Road, Surat. Open evenings — flavorful, homestyle marination and fast service.</p>
+
+        <div style="margin-top:12px;display:flex;gap:10px;flex-wrap:wrap">
+          <a class="cta" href="https://wa.me/91XXXXXXXXXX?text=Hi%20Mukesh%20Bhandari%2C%20I%27d%20like%20to%20order" target="_blank">Order on WhatsApp</a>
+          <a class="card" href="#menu">See Menu</a>
+        </div>
+
+        <div class="grid" style="margin-top:16px">
+          <div class="card">
+            <strong>Pickup & Delivery</strong>
+            <div class="small">Pickup available from 6pm. Delivery across Adajan & nearby areas.</div>
+          </div>
+          <div class="card">
+            <strong>Fresh Ingredients</strong>
+            <div class="small">Locally sourced chicken & spices. No frozen re-pack.</div>
+          </div>
+        </div>
+      </div>
+
+      <aside>
+        <div class="card">
+          <div style="font-weight:700;display:flex;justify-content:space-between;align-items:center">
+            <span>Contact</span>
+            <span class="small">Open: 6pm — 11pm</span>
+          </div>
+          <div style="margin-top:8px">
+            <div style="font-weight:700">Phone</div>
+            <div class="small">+91 XXXXXXXXXX</div>
+            <div style="margin-top:8px;font-weight:700">Address</div>
+            <div class="small">Plot 142, Gamtal Paiki, Adajan Road, Surat</div>
+            <div style="margin-top:10px">
+              <a class="cta" href="#contact">Get Directions</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="card" style="margin-top:12px">
+          <div style="font-weight:700;margin-bottom:8px">Quick Menu</div>
+          <div class="small">
+            <div>• Chicken Biryani — ₹180</div>
+            <div>• Tandoori Chicken (half) — ₹250</div>
+            <div>• Fried Chicken — ₹160</div>
+            <div>• Chicken Curry — ₹140</div>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <section id="menu" style="margin-top:24px">
+      <h2>Full Menu</h2>
+      <div class="grid">
+        <div class="card menu-item">
+          <img src="https://b.zmtcdn.com/data/reviews_photos/617/034160072f9b67c26c1e3d7856616617_1594442822.jpg" alt="Chicken Biryani" />
+          <div>
+            <div style="font-weight:700">Chicken Biryani</div>
+            <div class="small">Aromatic basmati, slow-cooked masala. ₹180</div>
+          </div>
+        </div>
+
+        <div class="card menu-item">
+          <img src="https://content.jdmagicbox.com/v2/comp/surat/z6/0261px261.x261.200830002148.s2z6/catalogue/mukesh-bhandari-chicken-center-adajan-road-surat-inexpensive-restaurants-below-rs-500-rzqe7y36g1.jpg" alt="Tandoori" />
+          <div>
+            <div style="font-weight:700">Tandoori Chicken (Half)</div>
+            <div class="small">Smoky, charred exterior. ₹250</div>
+          </div>
+        </div>
+
+        <div class="card menu-item">
+          <img src="https://content.jdmagicbox.com/comp/surat/c5/0261px261.x261.230217040932.z5c5/catalogue/mukesh-bhandari-surat-food-court-m5vj5bamd4-250.jpg" alt="Fried Chicken" />
+          <div>
+            <div style="font-weight:700">Fried Chicken</div>
+            <div class="small">Crispy, spicy batter. ₹160</div>
+          </div>
+        </div>
+
+        <div class="card menu-item">
+          <img src="https://content.jdmagicbox.com/v2/comp/surat/z6/0261px261.x261.200830002148.s2z6/catalogue/mukesh-bhandari-chicken-center-adajan-road-surat-inexpensive-restaurants-below-rs-500-rzqe7y36g1.jpg" alt="Chicken Curry" />
+          <div>
+            <div style="font-weight:700">Chicken Curry</div>
+            <div class="small">Homestyle curry with roti/steamed rice. ₹140</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="hours" style="margin-top:20px">
+      <h2>Hours & Location</h2>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:8px">
+        <div class="card hours">
+          <div style="font-weight:700">Opening Hours</div>
+          <div>Mon — Sun: <strong>6:00 PM — 11:00 PM</strong></div>
+          <div class="small">Holidays: check WhatsApp</div>
+        </div>
+        <div class="card">
+          <div style="font-weight:700;margin-bottom:8px">Location</div>
+          <!-- Replace the src below with the embed link that matches the map URL you provided -->
+          <iframe src="https://www.google.com/maps?q=21.1838913,72.8298806&z=16&output=embed" height="220" loading="lazy"></iframe>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" style="margin-top:18px">
+      <h2>Contact & Order</h2>
+      <div style="display:grid;grid-template-columns:1fr 360px;gap:16px">
+        <div>
+          <div class="card">
+            <form id="contactForm" onsubmit="handleContact(event)">
+              <div style="margin-bottom:8px;"><label for="name">Your name</label><br><input id="name" required style="width:100%;padding:8px;border-radius:6px;border:1px solid #ddd"></div>
+              <div style="margin-bottom:8px;"><label for="phone">Phone</label><br><input id="phone" required style="width:100%;padding:8px;border-radius:6px;border:1px solid #ddd"></div>
+              <div style="margin-bottom:8px;"><label for="message">Message / order details</label><br><textarea id="message" rows="4" style="width:100%;padding:8px;border-radius:6px;border:1px solid #ddd"></textarea></div>
+              <div style="display:flex;gap:8px">
+                <button class="cta" type="submit">Send via Email</button>
+                <a class="card" href="https://wa.me/91XXXXXXXXXX?text=Hi%20Mukesh%20Bhandari%2C%20I%27d%20like%20to%20order" target="_blank">Order on WhatsApp</a>
+              </div>
+            </form>
+          </div>
+
+          <div style="margin-top:12px" class="card">
+            <div style="font-weight:700">Gallery</div>
+            <div style="display:flex;gap:8px;margin-top:8px;flex-wrap:wrap">
+              <img src="https://b.zmtcdn.com/data/reviews_photos/617/034160072f9b67c26c1e3d7856616617_1594442822.jpg" style="width:120px;height:80px;object-fit:cover;border-radius:8px" />
+              <img src="https://content.jdmagicbox.com/v2/comp/surat/z6/0261px261.x261.200830002148.s2z6/catalogue/mukesh-bhandari-chicken-center-adajan-road-surat-inexpensive-restaurants-below-rs-500-rzqe7y36g1.jpg" style="width:120px;height:80px;object-fit:cover;border-radius:8px" />
+            </div>
+          </div>
+        </div>
+
+        <aside>
+          <div class="card">
+            <div style="font-weight:700">Quick Info</div>
+            <div class="small" style="margin-top:8px">Phone: +91 XXXXXXXXXX</div>
+            <div class="small">Payment: Cash, UPI</div>
+            <div class="small">Popular: Chicken Biryani, Tandoori</div>
+          </div>
+
+          <div class="card" style="margin-top:12px">
+            <div style="font-weight:700">Leave a review</div>
+            <div class="small">Loved it? Share a review on Google Maps to help others find us.</div>
+            <div style="margin-top:8px"><a class="cta" href="https://www.google.com/maps/place/Mukesh+Bhandari/@21.1838913,72.8298806,17z" target="_blank">Write a review</a></div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <footer>
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
+        <div>© Mukesh Bhandari Chicken Center — Surat</div>
+        <div class="small">Website by: Your Name • <span id="lastEdited">Edit this file to update content</span></div>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    function handleContact(e){
+      e.preventDefault();
+      const name=document.getElementById('name').value.trim();
+      const phone=document.getElementById('phone').value.trim();
+      const message=document.getElementById('message').value.trim();
+      const subject = encodeURIComponent('Order/Query from website - '+name);
+      const body = encodeURIComponent('Name: '+name+'\nPhone: '+phone+'\n\n'+message);
+      window.location.href = 'mailto:owner@example.com?subject='+subject+'&body='+body;
+    }
+
+    // small script to update last edited timestamp
+    document.getElementById('lastEdited').textContent = 'Last updated: '+(new Date()).toLocaleString();
+  </script>
+</body>
+</html>
